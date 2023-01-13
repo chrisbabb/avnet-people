@@ -15,7 +15,7 @@ function PersonDetails(props){
         fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people/${dataView[1]}`, {
             method: 'GET',
             headers: {
-                'Authorization': `${localStorage.getItem('token')}`
+                'Authorization': `JWT ${localStorage.getItem('token')}`
             }
         })
         .then(result => {
