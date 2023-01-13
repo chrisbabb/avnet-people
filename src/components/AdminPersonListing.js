@@ -13,7 +13,7 @@ function AdminPersonListing(props){
 
 
     function deletePerson(id){
-        fetch(`http://localhost:3000/people/${id}`, {
+        fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people/${id}`, {
             method: 'DELETE',
         })
         .then(setRefreshPeopleData(refreshPeopleData + 1))

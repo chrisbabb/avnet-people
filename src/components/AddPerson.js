@@ -33,7 +33,7 @@ function AddPerson(){
     }
 
     function savePerson(data, e){
-        fetch('http://localhost:3000/people', {
+        fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people', {
             method: "POST",
             body: data
         })

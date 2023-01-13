@@ -15,7 +15,7 @@ function Login(){
 
     function logUserIn(e){
         e.preventDefault();
-        fetch('http://localhost:3000/users', {
+        fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/users', {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',

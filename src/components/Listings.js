@@ -28,7 +28,7 @@ function Listings(){
 
     useEffect(() => { 
         if(dataView === 'i' || dataView === 'd'){
-            fetch('http://localhost:3000/people')
+            fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people')
             .then(result => {
                 if(result.ok){
                     return result.json();

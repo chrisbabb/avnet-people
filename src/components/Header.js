@@ -17,7 +17,7 @@ function Header(){
 
     useEffect(() => {
       if(currentUser === '' && localStorage.getItem('id') != ''){
-          fetch(`http://localhost:3000/users/${localStorage.getItem('id')}`)
+          fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/users/${localStorage.getItem('id')}`)
           .then(result => result.json())
           .then(final => setCurrentUser(final))
       }

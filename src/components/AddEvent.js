@@ -21,7 +21,7 @@ function AddEvent(){
     function addEvent(e){
         e.preventDefault();
         console.log(eventName, eventYear)
-        fetch('http://localhost:3000/corp_events', {
+        fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/corp_events', {
             method: "POST",
             headers:{
                 "Content-Type": "application/json",

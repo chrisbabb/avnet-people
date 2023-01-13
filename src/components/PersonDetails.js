@@ -12,7 +12,7 @@ function PersonDetails(props){
     const [dataView, setDataView] = useRecoilState(theDataView);
 
     useEffect(() => { 
-        fetch(`http://localhost:3000/people/${dataView[1]}`)
+        fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people/${dataView[1]}`)
         .then(result => {
             if(result.ok){
                 return result.json();
