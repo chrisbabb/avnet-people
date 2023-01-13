@@ -42,7 +42,6 @@ function AdminHeader(){
         fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people', {
           method: 'GET',
           headers: {
-              'Content-type': 'application/json',
               'Authorization': `${localStorage.getItem('token')}`
           }
       })

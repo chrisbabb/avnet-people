@@ -36,7 +36,6 @@ function AddPerson(){
         fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people', {
             method: "POST",
             headers: {
-                'Content-type': 'application/json',
                 'Authorization': `${localStorage.getItem('token')}`
             },
             body: data
