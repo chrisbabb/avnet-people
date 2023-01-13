@@ -39,7 +39,7 @@ function AdminHeader(){
 
       useEffect(() => { 
 
-        fetch('http://localhost:4000/people')
+        fetch('http://localhost:3000/people')
         .then(result => {
             if(result.ok){
                 return result.json();

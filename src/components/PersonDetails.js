@@ -12,7 +12,7 @@ function PersonDetails(props){
     const [dataView, setDataView] = useRecoilState(theDataView);
 
     useEffect(() => { 
-        fetch(`http://localhost:4000/people/${dataView[1]}`)
+        fetch(`http://localhost:3000/people/${dataView[1]}`)
         .then(result => {
             if(result.ok){
                 return result.json();

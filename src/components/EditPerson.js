@@ -20,7 +20,7 @@ function EditPerson(){
 
 
     useEffect(() => { 
-        fetch(`http://localhost:4000/people/${adminView[1]}`)
+        fetch(`http://localhost:3000/people/${adminView[1]}`)
         .then(result => {
             if(result.ok){
                 return result.json();
@@ -59,7 +59,7 @@ function EditPerson(){
     }
 
     function savePerson(data){
-        fetch(`http://localhost:4000/people/${adminView[1]}`, {
+        fetch(`http://localhost:3000/people/${adminView[1]}`, {
             method: "PATCH",
             body: data
         })

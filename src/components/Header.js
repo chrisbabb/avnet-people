@@ -17,7 +17,7 @@ function Header(){
 
     useEffect(() => {
       if(currentUser === '' && localStorage.getItem('id') != ''){
-          fetch(`http://localhost:4000/users/${localStorage.getItem('id')}`)
+          fetch(`http://localhost:3000/users/${localStorage.getItem('id')}`)
           .then(result => result.json())
           .then(final => setCurrentUser(final))
       }

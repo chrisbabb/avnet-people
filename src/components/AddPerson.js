@@ -33,7 +33,7 @@ function AddPerson(){
     }
 
     function savePerson(data, e){
-        fetch('http://localhost:4000/people', {
+        fetch('http://localhost:3000/people', {
             method: "POST",
             body: data
         })

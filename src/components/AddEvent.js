@@ -21,7 +21,7 @@ function AddEvent(){
     function addEvent(e){
         e.preventDefault();
         console.log(eventName, eventYear)
-        fetch('http://localhost:4000/corp_events', {
+        fetch('http://localhost:3000/corp_events', {
             method: "POST",
             headers:{
                 "Content-Type": "application/json",
