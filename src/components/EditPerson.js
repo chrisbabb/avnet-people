@@ -20,7 +20,13 @@ function EditPerson(){
 
 
     useEffect(() => { 
-        fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people/${adminView[1]}`)
+        fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people/${adminView[1]}`, {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `${localStorage.getItem('token')}`
+            }
+        })
         .then(result => {
             if(result.ok){
                 return result.json();
@@ -61,6 +67,10 @@ function EditPerson(){
     function savePerson(data){
         fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people/${adminView[1]}`, {
             method: "PATCH",
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `${localStorage.getItem('token')}`
+            },
             body: data
         })
         .then(response => response.json())

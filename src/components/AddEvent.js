@@ -23,9 +23,9 @@ function AddEvent(){
         console.log(eventName, eventYear)
         fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/corp_events', {
             method: "POST",
-            headers:{
-                "Content-Type": "application/json",
-                Accept:"application/json",
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `${localStorage.getItem('token')}`
             },
             body: JSON.stringify({
                 name: eventName,

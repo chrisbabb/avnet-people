@@ -35,6 +35,10 @@ function AddPerson(){
     function savePerson(data, e){
         fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people', {
             method: "POST",
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `${localStorage.getItem('token')}`
+            },
             body: data
         })
         .then(response => response.json())

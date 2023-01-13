@@ -15,6 +15,10 @@ function AdminPersonListing(props){
     function deletePerson(id){
         fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people/${id}`, {
             method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `${localStorage.getItem('token')}`
+            }
         })
         .then(setRefreshPeopleData(refreshPeopleData + 1))
     }
