@@ -43,6 +43,8 @@ function AddPerson(){
         })
         .then(response => response.json())
         .then(data => {
+
+            console.log(data);
             e.target.image.value = null;
             setPersonFirstName('');
             setPersonLastName('');
