@@ -12,10 +12,7 @@ function AdminPersonListing(props){
 
     function deletePerson(id){
         fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/corp_events/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Authorization': `JWT ${localStorage.getItem('token')}`
-            }
+            method: 'DELETE'
         })
         .then(setRefreshEventData(refreshEventData + 1))
     }

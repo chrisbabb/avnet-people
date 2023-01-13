@@ -24,7 +24,7 @@ function AddEvent(){
         fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/corp_events', {
             method: "POST",
             headers: {
-                'Authorization': `JWT ${localStorage.getItem('token')}`
+                'Authorization': `${localStorage.getItem('token')}`
             },
             body: JSON.stringify({
                 name: eventName,
