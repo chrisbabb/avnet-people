@@ -31,7 +31,7 @@ function Listings(){
             fetch('https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/people', {
                 method: 'GET',
                 headers: {
-                    'Authorization': `${localStorage.getItem('token')}`
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
             })
             .then(result => {

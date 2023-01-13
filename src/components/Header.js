@@ -20,7 +20,7 @@ function Header(){
           fetch(`https://oyster-app-7q899.ondigitalocean.app/avnet-people-backend/users/${localStorage.getItem('id')}`, {
             method: 'GET',
             headers: {
-                'Authorization': `${localStorage.getItem('token')}`
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
             }
         })
           .then(result => result.json())
